@@ -155,3 +155,47 @@ section {
 .btn-box .btn:hover::before {
     width: 100%;
 } 
+
+.home-sm{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 170px;
+    bottom: 4rem;
+}
+
+.home-sm a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center; 
+    align-items: center;
+    background: transparent;
+    color: var(--main-color);
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.home-sm a:hover{
+    color: var(--bg-color);
+}
+.home-sm a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    color: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sm a:hover::before{
+    width: 100%;
+}
